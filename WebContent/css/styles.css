@@ -1,0 +1,620 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #F0F2F5;
+    color: #1C1E21;
+    line-height: 1.4;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 75px;
+    padding: 0 10px;
+    width: 100%;
+}
+.container1{
+	max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+}
+/* Container cho index.jsp (có sidebar) */
+.index-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Heading */
+h2 {
+    color: #1C1E21;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DADDE1;
+    text-align: center;
+    margin-top: 60px;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1C1E21;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DADDE1;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.profile-header h2 {
+    margin-top: 0;
+}
+
+.profile-header p {
+    font-size: 15px;
+    color: #606770;
+    margin-bottom: 10px;
+}
+
+.profile-header .follow-button {
+    padding: 5px 10px;
+    background: #1877F2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.profile-header .follow-button.unfollow {
+    background: #dc3545;
+}
+
+.profile-header .follow-button:hover {
+    background: #165ECC;
+}
+
+.profile-header .follow-button.unfollow:hover {
+    background: #c02f3f;
+}
+
+/* Delete Account Button */
+.profile-header .delete-account-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #D32F2F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.profile-header .delete-account-button:hover {
+    background: #b02828;
+}
+
+/* Error Message */
+.error-message {
+    color: #D32F2F;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #FFEBEE;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 1000px;
+    margin: 0 auto 15px auto;
+    width: 600px;
+}
+
+/* Form Container (Đăng nhập, Đăng ký, Đăng bài, Sửa bài) */
+.form-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Fields (Áp dụng cho tất cả form) */
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #DADDE1;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.form-container textarea {
+    min-height: 80px;
+    resize: none;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus,
+.form-container textarea:focus {
+    border-color: #1877F2;
+}
+
+/* Submit Button */
+.form-container input[type="submit"] {
+    background-color: #E02424;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #C62020;
+}
+
+/* Links (Đăng ký, Quay lại) */
+.register-link,
+.login-link,
+.back-link {
+    display: block;
+    color: #1877F2;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link:hover,
+.login-link:hover,
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Login & Register Specific */
+.form-container.login,
+.form-container.register {
+    max-width: 396px;
+    margin: 10px auto;
+}
+
+/* Post List */
+.post-list {
+    max-width: 810px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    padding: 16px;
+    position: relative;
+}
+
+/* Post Header */
+.post-card .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.post-card .post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-card .post-header .info {
+    flex-grow: 1;
+}
+
+.post-card .post-header .info .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1C1E21;
+}
+
+.post-card .post-header .info .meta {
+    font-size: 13px;
+    color: #606770;
+}
+
+.post-card .post-header .info .meta .scope {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #606770;
+}
+
+/* Post Content */
+.post-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1E21;
+    margin-bottom: 8px;
+}
+
+.post-card p {
+    font-size: 15px;
+    color: #1C1E21;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Action Menu (Nút ba chấm) */
+.post-card .action-menu {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.post-card .action-menu .menu-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #606770;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.post-card .action-menu .menu-button:hover {
+    background-color: #F2F3F5;
+    border-radius: 50%;
+}
+
+/* Dropdown Menu (Ẩn mặc định, hiển thị khi click) */
+.post-card .action-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.post-card .action-menu .dropdown a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #1C1E21;
+    text-decoration: none;
+}
+
+.post-card .action-menu .dropdown a.delete {
+    color: #D32F2F;
+}
+
+.post-card .action-menu .dropdown a:hover {
+    background-color: #F2F3F5;
+}
+
+/* Hiển thị dropdown khi active */
+.post-card .action-menu.active .dropdown {
+    display: block;
+}
+
+/* No Posts */
+.no-posts {
+    color: #606770;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Form (Thanh tìm kiếm trong cột kết quả) */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form input[type="submit"] {
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Sidebar (Danh sách người dùng) */
+.sidebar {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    flex: 0 0 300px;
+    align-self: flex-start;
+    margin-top: 80px;
+}
+
+.sidebar h3 {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #1C1E21;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DADDE1;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    white-space: normal;
+}
+
+.sidebar ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #DADDE1;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    color: #0000ff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    flex: 1;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul li .follow-button {
+    background-color: #1877F2;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.sidebar ul li .follow-button:hover {
+    background-color: #165ECC;
+}
+
+/* Định dạng cho trạng thái "Unfollow" */
+.sidebar ul li .follow-button.unfollow {
+    background-color: #ff0000;
+}
+
+.sidebar ul li .follow-button.unfollow:hover {
+    background-color: #ff0000;
+}
+
+/* Main Content (Phần đăng bài và bài viết) */
+.main-content {
+    flex: 1;
+}
+
+/* Search Results Column (Cột kết quả tìm kiếm) */
+.search-results-column {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    flex: 0 0 300px;
+    align-self: flex-start;
+    margin-top: 80px;
+    min-width: auto;
+    max-width: auto;
+}
+
+.search-results-column h3 {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #1C1E21;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DADDE1;
+    margin-top: 0;
+}
+
+.search-results-column ul {
+    list-style: none;
+    padding: 0;
+    white-space: normal;
+}
+
+.search-results-column ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #DADDE1;
+}
+
+.search-results-column ul li:last-child {
+    border-bottom: none;
+}
+
+.search-results-column ul li a {
+    color: #0000ff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+}
+
+.search-results-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-results-column ul li .follow-button {
+    background-color: #1877F2;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.search-results-column ul li .follow-button:hover {
+    background-color: #165ECC;
+}
+
+.search-results-column ul li .follow-button.unfollow {
+    background-color: #ff0000;
+}
+
+.search-results-column ul li .follow-button.unfollow:hover {
+    background-color: #ff0000;
+}
+
+.not-found-img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+}
+
+/* Profile Link */
+.profile-link:hover {
+    text-decoration: underline;
+}
+
+.username-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.username-link:hover {
+    color: #007bff;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-decoration: underline;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+/* Post Section (Đăng bài) */
+.post-section {
+    flex: 2;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .sidebar, .search-results-column {
+        flex: 0 0 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .index-container {
+        flex-direction: column;
+    }
+    .sidebar, .search-results-column {
+        flex: 1;
+        width: 100%;
+    }
+    .search-form input[type="number"] {
+        width: 48%;
+    }
+    .search-form input[type="submit"] {
+        width: 100%;
+    }
+}
+.container index-container {
+	
+}
